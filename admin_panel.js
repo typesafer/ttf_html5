@@ -17,7 +17,8 @@ $('<article class="crud_sidebar"><span class="delete_sidebar">Delete Sidebar</sp
 });
 //Delete Sidebar
 $('.delete_sidebar').on('click',function(){
-alert('delete sidebar');
+//alert('delete sidebar');
+$(this).remove();
 });
 /**
 Prevent Defaults
