@@ -18,7 +18,7 @@ $('<article class="crud_sidebar"><span class="delete_sidebar">Delete Sidebar</sp
 //Delete Sidebar
 
 $(document).on('click', '.delete_sidebar', function(){
-         $(this).closest('sidebars_holder').remove();
+         $(this).closest('.sidebars_holder').remove();
 });
 
 /**
