@@ -17,10 +17,13 @@ $('<article class="crud_sidebar"><span class="delete_sidebar">Delete Sidebar</sp
 });
 //Delete Sidebar
 
-$('.delete_sidebar').on('click', closest('.sidebars_holder').fadeOut("slow", function()
+$('.delete_sidebar').on("click",function() 
+    {
+    $(this).closest('.sidebars_holder').fadeOut("slow", function()
       {
          $(this).remove();
       });
+    });
 
 /**
 Prevent Defaults
