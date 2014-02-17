@@ -16,7 +16,7 @@ $('.sidebar_create_button').on('click',function(){
 $('<article class="crud_sidebar"><span class="delete_sidebar">Delete Sidebar</span><br/><label class="name_label">Sidebar Name</label><input class="text_element" type="text" /></article>').appendTo('.sidebars_holder');
 });
 //Delete Sidebar
-$('.delete_sidebar').on('click',function(){
+$(document).on('click', '.delete_sidebar', function(){
 alert('delete sidebar');
 });
 /**
