@@ -23,6 +23,7 @@ alert('delete sidebar');
 Prevent Defaults
 */
 $('.original_array').on('click',function(e){
+  alert('hi');
 e.preventDefault();
 });
 $('.posted_data').on('click',function(e){
