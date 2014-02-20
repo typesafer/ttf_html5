@@ -39,6 +39,7 @@ e.preventDefault();
 $('.the_merged').on('click',function(e){
 e.preventDefault();
 });
+//Post placeholder values if form field is empty
 $('.the_form').submit(function() {
     $(this).find('input[type="text"]').each(function() {
         if($.trim($(this).val()) == '') $(this).val($(this).attr('placeholder'));
