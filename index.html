@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tender Theme Framework HTML5 Options Page </title>
+    <title>Tender Theme Framework HTML5 Options Page</title>
 	<script src="jquery.js" type="text/javascript"></script>
 	<script src="admin_panel.js" type="text/javascript"></script>
     <script src="tabcontent.js" type="text/javascript"></script>
@@ -16,30 +16,29 @@
 			<li><a class="le_debug" href="#view4">_!Debug Information</a></li>
         </ul>
         <div class="tabcontents">
+		<form class="the_form" method="post" action="posted.php">
             <div id="view1">
                 <label for="tab-1">Personal Information</label>
            <div class="content">
 		   <div class="contextual_message"></div>
 		   <div class="the_buttons_bar"><button class="le_submit">Save Changes</button></div>
            <article class="personal_info">
-		   <form method="post" action="json_options.php">
 		   <label class="name_label">Salutation</label>
-		   <select class="text_element">
+		   <select class="text_element" name="salutation">
+		   <option value="salutation" selected>Select your option</option>
 		   <option>Sir</option>
 		   <option>Dr</option>
 		   <option>Mr</option>
 		   <option>Miss</option>
 		   <option>Mrs</option>
 		   </select>
-		   <label class="name_label">Surname Name</label><input class="text_element" type="text" />
-		    <label class="name_label">First Name</label><input class="text_element" type="text" />
-			<label class="name_label">Last Name</label><input class="text_element" type="text" />
-			<label class="name_label">Genres Preferences</label><br/><span class="checkbox_span">Trance</span><input class="checkbox_class" type="checkbox" /><span class="checkbox_span">Folk</span><input class="checkbox_class" type="checkbox" /><span class="checkbox_span">Euro Dance</span><input class="checkbox_class" type="checkbox" /><span class="checkbox_span">Vocal Trance</span><input class="checkbox_class" type="checkbox" /><span class="checkbox_span">Metal</span><input class="checkbox_class" type="checkbox" />
-		   </form>
+		   <label class="name_label">Surname Name</label><input class="text_element" name="surname" placeholder="surname" type="text" />
+		    <label class="name_label">First Name</label><input class="text_element" name="firstname" placeholder="firstname" type="text" />
+			<label class="name_label">Last Name</label><input class="text_element" type="text" name="lastname" placeholder="lastname" />
+			<label class="name_label">Genres Preferences</label><br/><span class="checkbox_span">Trance</span><input class="checkbox_class" type="checkbox" name="trance" value="trance" /><span class="checkbox_span">Folk</span><input class="checkbox_class" type="checkbox" name="folk" value="folk" /><span class="checkbox_span">Euro Dance</span><input class="checkbox_class" type="checkbox" value="euro dance" name="euro_dance" /><span class="checkbox_span">Vocal Trance</span><input class="checkbox_class" type="checkbox" value="vocal trance" name="vocal_trance" /><span class="checkbox_span">All</span><input name="all" class="checkbox_class" type="checkbox" name="all" value="all" checked />
 		   </article>
 			    <div class="the_buttons_bar"><button class="le_submit">Save Changes</button></div>
-           </div> 
-                
+           </div>    
             </div>
             <div id="view2">
                 <label for="tab-2">Business Information</label>
@@ -47,13 +46,11 @@
 		   <div class="contextual_message"></div>
 		   <div class="the_buttons_bar"><button class="le_submit">Save Changes</button></div>
            <article class="personal_info">
-		   <form>
 		   <label class="name_label">Business Logo</label>
 		   <img class="image_element" src="steampunk.jpg" width="200" height="200"><span class="get_image_from_the_media_centre">Get Image From Media Centre</span>
-		   <label class="name_label">Business Name</label><input class="text_element" type="text" />
-		    <label class="name_label">Business Registration Number</label><input class="text_element" type="text" />
-			<label class="name_label">Business Paypal Email Address</label><input class="text_element" type="text" />
-		   </form>
+		   <label class="name_label">Business Name</label><input class="text_element" type="text" name="business_name" placeholder="business_name" />
+		    <label class="name_label">Business Registration Number</label><input class="text_element" type="text" name="business_registration_number" placeholder="business registration number" />
+			<label class="name_label">Business Paypal Email Address</label><input class="text_element" type="text" name="business_paypal_email_address" placeholder="business paypal email address" />
 		   </article>
 			    <div class="the_buttons_bar"><button class="le_submit">Save Changes</button></div>
            </div>                
@@ -64,16 +61,14 @@
 		   <div class="contextual_message"></div>
 		   <div class="the_buttons_bar"><button class="le_submit">Save Changes</button></div>
            <article class="personal_info">
-		   <form>
-		   <label class="name_label">Twitter handle</label><input class="text_element" type="text" />
-		    <label class="name_label">Stackoverflow handle</label><input class="text_element" type="text" />
+		   <label class="name_label">Twitter handle</label><input class="text_element" type="text" name="twitter_handle" placeholder="twitter handle"/>
+		    <label class="name_label">Stackoverflow handle</label><input class="text_element" type="text"  name="stackoverflow_handle" placeholder="stackoverflow handle"/>
 			<label class="name_label">Partners</label><input class="text_element partner_create_button" type="button" value="Add Partner" />
 			<article class="partners_holder">
 			</article>
 			<label class="name_label">Sidebars</label><input class="text_element sidebar_create_button" type="button" value="Add Sidebar" />
 			<article class="sidebars_holder">
 			</article>
-		   </form>
 		   </article>
 		 <div class="the_buttons_bar"><button class="le_submit">Save Changes</button></div>
            </div> 
@@ -88,6 +83,7 @@
 		   </ol>
            </div>                
             </div>
+			</form>
         </div>
     </div>
 </body>
